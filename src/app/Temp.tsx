@@ -5,6 +5,8 @@ import _ from 'lodash'
 import { CSSProperties } from 'react'
 import axios from 'axios'
 import { Work_Sans, Changa_One } from 'next/font/google'
+import dotenv from 'dotenv'
+dotenv.config()
 
 const work_sans = Work_Sans({
   weight: '400',
@@ -35,12 +37,15 @@ const Temp = () => {
   const [primaryColors, setPrimaryColors] = useState<string[]>([])
   const [secondaryColors, setSecondaryColors] = useState<string[]>([])
 
+  const url = `${process.env.NEXT_PUBLIC_AUTH_URL}/data`
+  console.log(url)
+
   useEffect(() => {
+    console.log(process.env.NEXT_PUBLIC_AUTH_URL)
     const fetchData = async () => {
       try {
-        const response = await axios.get<Card[]>(
-          'http://localhost:5050/card/data'
-        )
+        const response = await axios.get<Card[]>(url)
+        console.log(url)
         const responseData = response.data
 
         responseData.forEach((card) => {
