@@ -1,15 +1,24 @@
 {
     "version": 2,
+    "devCommand": "npm run start",
     "builds": [
-        {
-            "src": "src/app/api/api.js",
-            "use": "@now/node"
-        }
+      {
+        "src": "src/app/api/api.ts",
+        "use": "@vercel/node",
+        "config": { "includeFiles": ["src/**"] }
+      }
     ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "src/app/api/api.js"
+      {
+        "src": "/(.*)",
+        "dest": "src/app/api/api.ts",
+        "methods": ["GET", "POST", "PUT", "DELETE"],
+        "headers": {
+          "Access-Control-Allow-Credentials": "true",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST,PATCH,DELETE",
+          "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
         }
+      }
     ]
-}
+  }

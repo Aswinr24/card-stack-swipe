@@ -24,7 +24,7 @@ interface DataObject {
   secondary_color: string;
 }
 
-const dataFilePath = path.resolve(__dirname, '../data/', 'data.json');
+const dataFilePath = path.resolve(__dirname, './data', 'data.json');
 
 
 app.get('/card/data', (req: Request, res: Response) => {
