@@ -1,0 +1,32 @@
+[
+    {
+      "title": "QUIZ YOURSELF",
+      "description": "True or false: React guarantees the code inside useLayoutEffect and any state updates scheduled inside it willbe processed before the browser repaints the screen?",
+      "primary_color": "#f288a3",
+      "secondary_color": "#ec243c"
+    },
+    {
+      "title": "QUIZ YOURSELF",
+      "description": "In which of the following scenarios would you use useEffect event?",
+      "primary_color": "#0daa5a",
+      "secondary_color": "#fbbb2b"
+    },
+    {
+        "title": "QUIZ YOURSELF",
+        "description": "The purpose of useSyncExternalStor is to _.",
+        "primary_color": "#7c5ca4",
+        "secondary_color": "#0daa5a"
+    },
+    {
+        "title": "QUIZ YOURSELF",
+        "description": "What is the purpose of useRef?",
+        "primary_color": "#fbbb2b",
+        "secondary_color": "#f288a3"
+    },
+    {
+        "title": "QUIZ YOURSELF",
+        "description": "When do you use useContext?",
+        "primary_color": "#0daa5a",
+        "secondary_color": "#258BBB"
+    }
+  ]
